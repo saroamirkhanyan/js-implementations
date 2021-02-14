@@ -1,4 +1,7 @@
 /* Code */
+/**
+@param {function} parentClass
+*/
 Object.prototype.instanceof = function (parentClass) {
 	let current = this.__proto__;
 	while (current) {
