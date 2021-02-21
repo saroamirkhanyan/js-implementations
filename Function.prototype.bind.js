@@ -2,15 +2,15 @@
  * @author Saro Amirkhanyan
  * @param {object} ctx 
  */
-Function.prototype.bind = function (ctx) {
+Function.prototype.myBind = function (ctx, ...args) {
   let fn = Symbol('fn');
   ctx[fn] = this;
-  return () => ctx[fn]()
+  return (...innerArgs) => args.length ? ctx[fn](...args) : ctx[fn](...innerArgs)
 }
 // Test
-function greeting() {
-  console.log(this.name)
+function greeting(age) {
+  console.log(this.name, age)
 }
-greeting.bind({
+greeting.myBind({
   name: "Saro",
-})()
+})(18)
