@@ -11,6 +11,6 @@ Function.prototype.bind = function (ctx) {
 function greeting() {
   console.log(this.name)
 }
-greeting.myBind({
+greeting.bind({
   name: "Saro",
 })()
