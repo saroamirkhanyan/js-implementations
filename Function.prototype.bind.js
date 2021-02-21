@@ -13,4 +13,4 @@ function greeting(age) {
 }
 greeting.myBind({
   name: "Saro",
-})(18)
+})(99)
