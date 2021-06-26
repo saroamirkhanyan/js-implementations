@@ -14,7 +14,7 @@ Object.prototype.take = function (strings) {
 // Test
 const user = {name:"Saro",lastName:"Amirkhanyan"}
 console.log(
-user.take`
-	name,
-`
+	user.take`
+		name,
+	`
 )
